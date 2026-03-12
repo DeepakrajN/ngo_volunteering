@@ -10,7 +10,8 @@
     "seed": "node seed/seed.js",
     "seed:volunteers": "node seed/seed_volunteers.js",
     "client": "npm start --prefix client",
-    "build": "npm run build --prefix client"
+    "build": "npm run build --prefix client",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [
     "ngo",
