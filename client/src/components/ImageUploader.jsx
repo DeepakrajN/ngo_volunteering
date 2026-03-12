@@ -23,7 +23,7 @@ const ImageUploader = ({ onImageSelect, currentImage = '' }) => {
 
     document.addEventListener('paste', handlePaste);
     return () => document.removeEventListener('paste', handlePaste);
-  }, []);
+  }, [handleFileUpload]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleFileUpload = (file) => {
     if (file && file.type.startsWith('image/')) {

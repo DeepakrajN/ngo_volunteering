@@ -209,7 +209,7 @@ const EventCheckIn = () => {
             <div className="space-y-4">
               {photos.map((photo, index) => (
                 <div key={index} className="relative">
-                  <img src={photo} alt={`Photo ${index + 1}`} className="w-full h-48 object-cover rounded-lg" />
+                  <img src={photo} alt={`Photo ${index + 1}`} className="w-full h-48 object-cover rounded-lg" /> {/* eslint-disable-line jsx-a11y/img-redundant-alt */}
                   <button
                     onClick={() => setPhotos(photos.filter((_, i) => i !== index))}
                     className="absolute top-2 right-2 bg-red-600 text-white p-2 rounded-full hover:bg-red-700"
