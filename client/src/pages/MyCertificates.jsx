@@ -16,7 +16,7 @@ const MyCertificates = () => {
     } else {
       setLoading(false);
     }
-  }, [user]);
+  }, [user]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchCertificates = async () => {
     try {

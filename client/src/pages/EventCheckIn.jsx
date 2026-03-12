@@ -20,7 +20,7 @@ const EventCheckIn = () => {
   useEffect(() => {
     fetchEventAndCheckStatus();
     getLocation();
-  }, [eventId]);
+  }, [eventId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchEventAndCheckStatus = async () => {
     try {

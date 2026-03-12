@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import api from '../api';
 
 const AdminClubManage = () => {
@@ -15,7 +14,7 @@ const AdminClubManage = () => {
 
   useEffect(() => {
     fetchClub();
-  }, [clubId]);
+  }, [clubId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchClub = async () => {
     try {

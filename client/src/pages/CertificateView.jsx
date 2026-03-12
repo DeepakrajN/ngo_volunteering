@@ -10,7 +10,7 @@ const CertificateView = () => {
 
   useEffect(() => {
     fetchCertificate();
-  }, [certificateId]);
+  }, [certificateId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchCertificate = async () => {
     try {

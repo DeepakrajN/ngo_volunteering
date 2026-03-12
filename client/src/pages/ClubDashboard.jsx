@@ -10,7 +10,7 @@ const ClubDashboard = () => {
 
   useEffect(() => {
     fetchClub();
-  }, [clubId]);
+  }, [clubId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchClub = async () => {
     try {

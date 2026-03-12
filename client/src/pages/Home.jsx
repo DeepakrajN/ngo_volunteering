@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const FeatureCard = ({ to, title, desc, icon, delay = 0 }) => (
@@ -40,11 +40,7 @@ const Home = () => {
   const [announcements, setAnnouncements] = useState([]);
   const [events, setEvents] = useState([]);
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const [heroRef, heroInView] = useInView({ threshold: 0.1 });
-  const [featuresRef, featuresInView] = useInView({ threshold: 0.1 });
-  const [testimonialsRef, testimonialsInView] = useInView({ threshold: 0.1 });
-  const [eventsRef, eventsInView] = useInView({ threshold: 0.1 });
-  const [ctaRef, ctaInView] = useInView({ threshold: 0.1 });
+  const [heroRef] = useInView({ threshold: 0.1 });
 
   const handleSubscribe = (e) => {
     e.preventDefault();
